@@ -109,3 +109,76 @@ exports.getBook = async function(req, res) {
     }
 
 }
+
+exports.updateBook = async function(req, res) {
+
+    try {
+
+        let id = req.params.id;
+        console.log("id : ",id);
+
+        let body = req.body;
+        console.log("body : ",body);
+
+        await books.updateOne({_id : id},{$set : body});
+
+        let response = success_function({
+            success : true,
+            statusCode : 200,
+            message : "book data updated successfully"
+        });
+
+        res.status(response.statusCode).send(response);
+        return;
+        
+    } catch (error) {
+
+        console.log("error : ",error);
+
+        let response = error_function({
+            success : false,
+            statusCode : 400,
+            message : "book data updation failed"
+        });
+
+        res.status(response.statusCode).send(response);
+        return;
+        
+    }
+
+}
+
+exports.deleteBook = async function(req, res) {
+
+    try {
+
+        let id = req.params.id;
+        console.log("id : ",id);
+
+        await books.deleteOne({_id : id});
+
+        let response = success_function({
+            success : true,
+            statusCode : 200,
+            message : "book data deleted successfully"
+        });
+
+        res.status(response.statusCode).send(response);
+        return;
+        
+    } catch (error) {
+
+        console.log("error : ",error);
+
+        let response = error_function({
+            success : false,
+            statusCode : 400,
+            message : "book data deletion failed"
+        });
+
+        res.status(response.statusCode).send(response);
+        return;
+        
+    }
+
+}

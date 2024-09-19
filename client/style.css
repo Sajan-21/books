@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+}
+.opacity-custom{
+    opacity: .8;
+}
+
+.blur-effect{
+    filter: blur(3px);
+}
