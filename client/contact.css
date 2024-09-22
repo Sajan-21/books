@@ -25,21 +25,3 @@
     color: darkgreen;
     border-bottom: 1px solid darkgreen;
 }
-
-.opacity-custom{
-    opacity: .9;
-}
-
-.introduction-img{
-    width: 100%;
-    height: 130vh;
-}
-
-.blur-effect{
-    filter: blur(2px);
-}
-
-.images-size{
-    width: 15vw;
-    height: 45vh;
-}

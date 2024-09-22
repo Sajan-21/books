@@ -40,15 +40,12 @@ exports.getBooks = async function(req, res) {
 
     try {
 
-        let findResponse = await books.find();
-
-        let strbooks = JSON.stringify(findResponse);
-        console.log("strResponse : ",strbooks);
+        let allBooks = await books.find();
 
         let response = success_function({
             success : true,
             statusCode : 200,
-            data : strbooks
+            data : allBooks
         });
 
         res.status(response.statusCode).send(response);
@@ -81,13 +78,10 @@ exports.getBook = async function(req, res) {
 
         let db_response = await books.findOne({_id : id});
 
-        let strbook = JSON.stringify(db_response);
-        console.log("strbook : ",strbook);
-
         let response = success_function({
             success : true,
             statusCode : 200,
-            data : strbook
+            data : db_response
         });
 
         res.status(response.statusCode).send(response);

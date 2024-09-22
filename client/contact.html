@@ -16,13 +16,14 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
             <nav class="">
-                <div class="">
-                    <div class="d-flex justify-content-between align-items-center bg-dark px-5">
+                <div class="bg-dg">
+                    <div class="d-flex justify-content-between align-items-center container px-5">
                         <div class="col">
                             <p class="text-light">customer Care : 2255</p>
                         </div>
@@ -33,17 +34,22 @@
                 </div>
                 <div class="container">
                     <div class="row d-flex justify-content-between align-items-center p-3">
-                        <div class="col text-start d-flex gap-2 align-items-center"><img src="./images/icons8-books-48.png" alt=""><p>CURRENT BOOKS</p></div>
-                        <div class="col text-center">
-                            <ul class="list-inline d-flex justify-content-evenly align-items-center">
-                                <li class="list-inline-item"><a href="./index.html" class="text-dark text-decoration-none">Home</a></li>
-                                <li class="list-inline-item"><a href="./shop.html" class="text-dark text-decoration-none">Shop</a></li>
-                                <li class="list-inline-item"><a href="./contact.html" class="text-dark text-decoration-none">Contact</a></li>
+                        <div class="col">
+                            <ul class="list-inline d-flex justify-content-start gap-5">
+                                <a href="./index.html" class="text-dark text-decoration-none nav-link"><li class="list-inline-item hover-effect">Home</li></a>
+                                <a href="./shop.html" class="text-dark text-decoration-none nav-link"><li class="list-inline-item hover-effect">Shop</li></a>
+                                <a href="./contact.html" class="text-dark text-decoration-none nav-link"><li class="list-inline-item hover-effect">Contact</li></a>
                             </ul>
                         </div>
-                        <div class="col text-end">
-                            <ul class="list-inline d-flex justify-content-center align-items-center"></ul>
-                                <li class="list-inline-item"><a href="" class="text-dark"><button class="btn border border-dark rounded-pill">help</button></a></li>
+
+                        <div class="col text-center">
+                            <img src="./images/currnet-books-logo.webp" class="logo-width" alt="">
+                        </div>
+                        
+                        <div class="col">
+                            <ul class="list-inline d-flex align-items-center justify-content-end">
+                                <li class="list-inline-item"><a href="" class="text-dark"><input type="text" placeholder="search book here" class="rounded-pill p-2"></a></li>
+                                <li class="list-inline-item"><a href="./admin.html" class="text-dark"><button class="btn">admin</button></a></li>
                             </ul>
                         </div>
                     </div>

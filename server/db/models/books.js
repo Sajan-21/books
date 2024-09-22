@@ -26,7 +26,7 @@ const booksSchema = new mongoose.Schema({
         required : true
     },
     release_date : {
-        type : Date,
+        type : String,
         required : true
     },
     price : {
